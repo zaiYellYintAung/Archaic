@@ -163,7 +163,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="h-[95vh] flex items-center pl-0 md:pl-12">
+    <div className="h-[95vh] flex items-center pl-0 lg:pl-12">
       <main className=" w-[450px] h-[460px] border">
         <div className="h-1/4 w-full  flex items-center font-semibold text-sm">
           <section
