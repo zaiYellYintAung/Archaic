@@ -20,8 +20,9 @@ const Navbar = () => {
               className="flex z-40 font-semibold px-2 items-center">
               <span>Archaic</span>
             </Link>
-
-            <SubNav />
+            <div className="hidden md:block">
+              <SubNav />
+            </div>
           </div>
           <div className="hidden items-center space-x-4 sm:flex">
             <ThemeToggle />

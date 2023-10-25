@@ -1,3 +1,12 @@
+import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
+
 export const footerLinks = [
   {
     title: "Learn More",
@@ -26,11 +35,5 @@ export const contactInfos = {
 
 export const socialLinks = {
   title: "Social",
-  links: [
-    "/facebook.svg",
-    "/instagram.svg",
-    "/twitter.svg",
-    "/youtube.svg",
-    "/wordpress.svg",
-  ],
+  links: [FaFacebook, FaInstagram, FaTwitter, FaYoutube, FaLinkedin],
 };

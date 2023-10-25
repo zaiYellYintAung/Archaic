@@ -5,16 +5,17 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="flex items-center justify-center mb-12">
+    <footer className="flex items-center justify-center my-12">
       <div className="mx-auto container  flex w-full flex-col gap-14">
-        <div className="flex items-center justify-start gap-[10%] md:flex-row">
+        <div className="flex items-center flex-col justify-start gap-[10%] md:flex-row">
           <Link href="/" className="mb-10">
-            <Image src="hilink-logo.svg" alt="logo" width={74} height={29} />
+            {/* <Image src="hilink-logo.svg" alt="logo" width={74} height={29} /> */}
+            Logo
           </Link>
 
           <div className="flex flex-wrap gap-10 sm:justify-between md:flex-1">
-            {footerLinks.map((columns) => (
-              <FooterColumn title={columns.title}>
+            {footerLinks.map((columns, index) => (
+              <FooterColumn title={columns.title} key={index}>
                 <ul className="text-gray-500 flex flex-col gap-4 regular-14">
                   {columns.links.map((link) => (
                     <Link href="/" key={link}>
@@ -45,10 +46,10 @@ const Footer = () => {
 
             <div className="flex flex-col gap-5">
               <FooterColumn title={socialLinks.title}>
-                <ul className="text-gray-30 flex gap-4 regular-14">
-                  {socialLinks.links.map((link) => (
-                    <Link href="/" key={link}>
-                      <Image src={link} alt="logo" width={24} height={24} />
+                <ul className="text-gray-30 flex gap-5 regular-14">
+                  {socialLinks.links.map((Icon, index) => (
+                    <Link href="/" className="text-xl " key={index}>
+                      <Icon />
                     </Link>
                   ))}
                 </ul>
@@ -57,7 +58,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border bg-gray-20" />
+        <div className="border-t" />
         <p className="w-full text-center text-gray-30 regular-14 text-sm">
           2023 Hilink | All rights reserved
         </p>

@@ -18,7 +18,7 @@ const SubNav = () => {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger className="text-sm">
-            Getting started
+            Products
           </NavigationMenuTrigger>
           <NavigationMenuContent className="bg-background text-sm">
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
@@ -67,21 +67,21 @@ const SubNav = () => {
         <NavigationMenuItem>
           <Link href="/pricing" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              <span className="text-sm">Pricings</span>
+              <span className="text-sm">About Us</span>
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href="/pricing" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              <span className="text-sm">Pricings</span>
+              <span className="text-sm">Blogs</span>
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href="/pricing" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              <span className="text-sm">Pricings</span>
+              <span className="text-sm">Enterprise</span>
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
