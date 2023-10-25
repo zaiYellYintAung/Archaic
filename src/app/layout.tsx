@@ -4,10 +4,11 @@ import { Inter } from "next/font/google";
 
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { siteMetaData } from "@/config";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {};
+export const metadata: Metadata = { title: "Archaic" };
 
 interface RootLayoutProps {
   children: React.ReactNode;

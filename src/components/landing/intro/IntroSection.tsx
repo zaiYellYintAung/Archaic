@@ -23,7 +23,7 @@ const companies = [
 
 const IntroSection = () => {
   return (
-    <div className="p-8 md:p-12  space-y-8 bg-primary text-primary-foreground rounded-2xl">
+    <div className="p-8 md:p-12  space-y-8 bg-primary text-primary-foreground rounded-2xl max-w-6xl mx-auto">
       <div className="flex items-center gap-4">
         <h1 className="text-lg md:text-2xl font-medium md:flex-shrink-0 ">
           We’ve worked with hundreds of amazing people

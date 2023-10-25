@@ -1,5 +1,6 @@
 import AboutSection from "@/components/landing/about/AboutSection";
 import BannerSection from "@/components/landing/banner/BannerSection";
+import CompanySection from "@/components/landing/company/CompanySection";
 import FeatureSection from "@/components/landing/feature/FeatureSection";
 import FinishSection from "@/components/landing/finishing/FinishSection";
 import HeroSection from "@/components/landing/hero/HeroSection";
@@ -11,13 +12,13 @@ import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <div className="space-y-16 mb-8">
-      <div className="container mx-auto space-y-16">
+    <div className="space-y-20 mb-12">
+      <div className="container mx-auto space-y-20">
         <HeroSection />
         {/* <IntroSection /> */}
       </div>
       <BannerSection />
-      <div className="container mx-auto space-y-16">
+      <div className="container mx-auto space-y-20">
         <FeatureSection />
         <ServiceSectionTwo />
         <ServiceSectionOne />
@@ -26,7 +27,8 @@ export default function Home() {
 
         <TestimonialSection />
 
-        <FinishSection />
+        <IntroSection />
+        {/* <FinishSection /> */}
       </div>
     </div>
   );
