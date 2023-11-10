@@ -1,9 +1,11 @@
 "use client";
 
 import { buttonVariants } from "@/components/ui/button";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { FaUser, FaBriefcase, FaSearchDollar } from "react-icons/fa";
+import hero from "@/assets/landing/nani.png";
 
 const HeroSection = () => {
   const [selectedOne, setSelectedOne] = useState("client");
@@ -161,49 +163,127 @@ const HeroSection = () => {
         );
     }
   };
-
   return (
-    <div className="h-[95vh] flex items-center max-w-6xl mx-auto">
-      <main className=" w-[450px] h-[460px] border">
-        <div className="h-1/4 w-full  flex items-center font-semibold text-sm">
-          <section
-            className={`w-1/3 flex justify-center h-full pt-2 ${
-              selectedOne === "client" && "border-b-8"
-            } items-center`}>
-            <button
-              className="flex flex-col items-center"
-              onClick={() => setSelectedOne("client")}>
-              <FaUser className="text-xl mb-2" />
-              Client
-            </button>
-          </section>
-          <section
-            className={`w-1/3 flex justify-center h-full pt-2 ${
-              selectedOne === "seeker" && "border-b-8"
-            } items-center`}>
-            <button
-              className="flex flex-col items-center"
-              onClick={() => setSelectedOne("seeker")}>
-              <FaBriefcase className="text-xl mb-2" />
-              Job Seeker
-            </button>
-          </section>
-          <section
-            className={`w-1/3 flex justify-center h-full pt-2 ${
-              selectedOne === "freelancer" && "border-b-8"
-            } items-center`}>
-            <button
-              className="flex flex-col items-center"
-              onClick={() => setSelectedOne("freelancer")}>
-              <FaSearchDollar className="text-xl mb-2" />
-              Freelancer
-            </button>
-          </section>
-        </div>
-        <div className="h-1/4 p-8 border-t">{displayContent()}</div>
-      </main>
+    <div className="relative isolate overflow-hidden h-screen">
+      <Image
+        priority
+        alt="hero"
+        src={hero}
+        placeholder="blur"
+        quality={100}
+        fill
+        sizes="100vw"
+        style={{
+          objectFit: "cover",
+          zIndex: -10,
+          position: "absolute",
+        }}
+      />
+      {/* overlay */}
+      <div className="absolute inset-0 bg-black opacity-50 -z-10" />
+      <div className="h-full flex items-center max-w-6xl mx-auto">
+        <main className=" w-[450px] h-[460px] border bg-background">
+          <div className="h-1/4 w-full  flex items-center font-semibold text-sm">
+            <section
+              className={`w-1/3 flex justify-center h-full pt-2 ${
+                selectedOne === "client" && "border-b-8"
+              } items-center`}>
+              <button
+                className="flex flex-col items-center"
+                onClick={() => setSelectedOne("client")}>
+                <FaUser className="text-xl mb-2" />
+                Client
+              </button>
+            </section>
+            <section
+              className={`w-1/3 flex justify-center h-full pt-2 ${
+                selectedOne === "seeker" && "border-b-8"
+              } items-center`}>
+              <button
+                className="flex flex-col items-center"
+                onClick={() => setSelectedOne("seeker")}>
+                <FaBriefcase className="text-xl mb-2" />
+                Job Seeker
+              </button>
+            </section>
+            <section
+              className={`w-1/3 flex justify-center h-full pt-2 ${
+                selectedOne === "freelancer" && "border-b-8"
+              } items-center`}>
+              <button
+                className="flex flex-col items-center"
+                onClick={() => setSelectedOne("freelancer")}>
+                <FaSearchDollar className="text-xl mb-2" />
+                Freelancer
+              </button>
+            </section>
+          </div>
+          <div className="h-1/4 p-8 border-t">{displayContent()}</div>
+        </main>
+      </div>
     </div>
   );
+
+  // return (
+  //   <div className="h-[95vh] flex items-center max-w-6xl mx-auto">
+  //     <div className="relative isolate overflow-hidden h-full">
+  //       <Image
+  //         priority
+  //         alt="hero"
+  //         src={hero}
+  //         placeholder="blur"
+  //         quality={100}
+  //         fill
+  //         sizes="100vw"
+  //         style={{
+  //           objectFit: "cover",
+  //           zIndex: -10,
+  //           position: "absolute",
+  //         }}
+  //       />
+  //       {/* overlay */}
+  //       <div className="absolute inset-0 bg-black opacity-50 -z-10" />
+  //     </div>
+  //     <main className=" w-[450px] h-[460px] border">
+  //       <div className="h-1/4 w-full  flex items-center font-semibold text-sm">
+  //         <section
+  //           className={`w-1/3 flex justify-center h-full pt-2 ${
+  //             selectedOne === "client" && "border-b-8"
+  //           } items-center`}>
+  //           <button
+  //             className="flex flex-col items-center"
+  //             onClick={() => setSelectedOne("client")}>
+  //             <FaUser className="text-xl mb-2" />
+  //             Client
+  //           </button>
+  //         </section>
+  //         <section
+  //           className={`w-1/3 flex justify-center h-full pt-2 ${
+  //             selectedOne === "seeker" && "border-b-8"
+  //           } items-center`}>
+  //           <button
+  //             className="flex flex-col items-center"
+  //             onClick={() => setSelectedOne("seeker")}>
+  //             <FaBriefcase className="text-xl mb-2" />
+  //             Job Seeker
+  //           </button>
+  //         </section>
+  //         <section
+  //           className={`w-1/3 flex justify-center h-full pt-2 ${
+  //             selectedOne === "freelancer" && "border-b-8"
+  //           } items-center`}>
+  //           <button
+  //             className="flex flex-col items-center"
+  //             onClick={() => setSelectedOne("freelancer")}>
+  //             <FaSearchDollar className="text-xl mb-2" />
+  //             Freelancer
+  //           </button>
+  //         </section>
+  //       </div>
+  //       <div className="h-1/4 p-8 border-t">{displayContent()}</div>
+  //     </main>
+  //   </div>
+  // );
 };
 
 export default HeroSection;

@@ -11,9 +11,9 @@ const Navbar = () => {
   const user = "";
 
   return (
-    <nav className="sticky h-14 inset-x-0 top-0 z-30 w-full border-b border-border bg-background/75 backdrop-blur-lg transition-all">
+    <nav className="sticky h-16 inset-x-0 top-0 z-30 w-full border-b border-border bg-background/75 backdrop-blur-lg transition-all">
       <div className="container mx-auto">
-        <div className="flex h-14 items-center justify-between border-b border-border">
+        <div className="flex h-16 items-center justify-between border-b border-border">
           <div className="items-center space-x-2 sm:flex">
             <Link
               href="/"
